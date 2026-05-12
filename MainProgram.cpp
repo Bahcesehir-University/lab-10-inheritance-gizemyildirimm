@@ -56,7 +56,7 @@ public:
     //       getMake(), getYear(), getFuelLevel()
     std::string getMake() const;
     int getYear() const;
-    double getfuelLevel() const;
+    double getFuelLevel() const;
 
     // TODO: declare refuel(double amount)
     //       Adds amount to fuelLevel. Max is 100.0. Ignore negative amounts.
@@ -158,7 +158,7 @@ std::string Vehicle::getMake() const {
 int Vehicle :: getYear() const{
     return year;
 }
-double Vehicle :: getfuelLevel() const {
+double Vehicle :: getFuelLevel() const {
     return fuelLevel;
 }
 
@@ -196,7 +196,7 @@ int Car::getNumDoors() const{
 //       Hint: use std::ostringstream for formatted decimal output
 std::string Car::describe() const {
     std::ostringstream oss;
-    oss <<"car: " << make << " ( " << year << " ) "<< numDoors<<" doors , fuel: " << fuelLevel << "%" ;
+    oss <<"Car: " << make << " ( " << year << " ) "<< numDoors<<" doors , fuel: " << fuelLevel << "%" ;
     return oss.str();
 }
 
@@ -215,7 +215,7 @@ double Truck::getPayloadTons() const{
 // TODO: Implement describe()
 std::string Truck::describe() const {
     std::ostringstream oss;
-    oss <<" truck: " << make << " ( " << year << " ) "<< " payload: " << payloadTons <<  "  fuel: " << fuelLevel << "%";
+    oss <<"Truck: " << make << " ( " << year << " ) "<< " payload: " << payloadTons <<  "  fuel: " << fuelLevel << "%";
     return oss.str();
 }
 
@@ -239,7 +239,7 @@ int main() {
 
     // Refuel demo
     c.refuel(20.0);
-    std::cout << "After refuel: " << c.getfuelLevel() << "%\n";
+    std::cout << "After refuel: " << c.getFuelLevel() << "%\n";
 
     return 0;
 }
